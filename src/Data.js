@@ -53,5 +53,17 @@ export const marcas = [
         'https://example.com/edge40-2.jpg',
         'https://example.com/edge40-3.jpg'
       ]
+    },
+    {
+      id: 5,
+      nombre: 'Motorola Edge 40',
+      descripcion: 'Pantalla pOLED, MediaTek Dimensity 8020, resistente al agua',
+      precio: 699,
+      marcaId: 1,
+      fotos: [
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPQKNaMBTCYWGBFzxuTnNugWDTV68dyOYNFw&s',
+        'https://example.com/edge40-2.jpg',
+        'https://example.com/edge40-3.jpg'
+      ]
     }
   ];
