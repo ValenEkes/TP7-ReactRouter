@@ -1,23 +1,28 @@
-import { useParams } from "react-router-dom";
-import { celulares } from "./Data";
+import { Route, useParams } from "react-router-dom";
+import { celulares, marcas } from "./Data";
 import React, {useState} from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Celulares = () => {
   const { marcaId, id } = useParams();
-  const[idTelefonos,SetIdTelefonos] =useState([])
+  const[idMarca, setIdMarca] =useState()
+  let navigate=useNavigate()
   const handleChange = (e) => {
-    SetIdTelefonos(e.target.value)
+    setIdMarca(e.target.value);
+    //redirijo a la url que filtra por marca
+    
   }
   return (
     <>
-    <select value={idTelefonos} onChange={handleChange}>
+    <select onChange={handleChange}>
         <option value="">Todas las marcas</option>
-        {celulares.map((e) => (
+        {marcas.map((e) => (
           <option key={e.id} value={e.id}>
             {e.nombre}
           </option>
         ))}
       </select>
+      <button onClick={()=>navigate("/productos/" +idMarca)} type="submit">Validar</button>
       {celulares
         .filter((c) => {
             if (!marcaId && !id) {

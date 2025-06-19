@@ -8,7 +8,7 @@ import Contactos from './Contactos'
 
 
 function App() {
-  return (
+return (
     <>
    <HashRouter>
    <Routes>
@@ -25,6 +25,7 @@ function App() {
 
     </>
   )
+
 }
 
 export default App
